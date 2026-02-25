@@ -59,9 +59,9 @@ namespace Mango.Web.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> ProductDelete(int ProductId)
+        public async Task<IActionResult> ProductDelete(int productId)
         {
-            ResponseDto? response = await _productService.GetProductByIdAsync(ProductId);
+            ResponseDto? response = await _productService.GetProductByIdAsync(productId);
 
             if (response != null && response.IsSuccess)
             {
@@ -94,9 +94,9 @@ namespace Mango.Web.Controllers
             return View(ProductDto);
         }
 
-        public async Task<IActionResult> ProductEdit(int ProductId)
+        public async Task<IActionResult> ProductEdit(int productId)
         {
-            ResponseDto? response = await _productService.GetProductByIdAsync(ProductId);
+            ResponseDto? response = await _productService.GetProductByIdAsync(productId);
 
             if (response != null && response.IsSuccess)
             {
